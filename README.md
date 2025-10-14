@@ -1,2 +1,2 @@
 # gwt
-Streamlines your Git Worktree workflows
+Streamline your Git Worktree workflows.

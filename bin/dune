@@ -1,0 +1,4 @@
+(executable
+ (public_name gwt)
+ (name main)
+ (libraries gwt))

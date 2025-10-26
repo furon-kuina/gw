@@ -1,0 +1,6 @@
+(executable
+ (public_name gw)
+ (name main)
+ (libraries gw core core_unix core_unix.sys_unix core_unix.command_unix otoml)
+ (preprocess
+  (pps ppx_jane)))

@@ -1,0 +1,35 @@
+# Example configuration file for gw
+# Copy this file to ~/.config/gw/config.toml and customize it
+
+# Default configuration applied to all repositories
+[default]
+base = "main"
+
+# Repository-specific configurations
+# You can match by repo name (last part of URL) or full remote URL
+
+# Example: Match by repo name
+[repos.frontend]
+base = "develop"
+
+[repos.frontend.hooks]
+on_open = "npm install && npm run dev"
+
+[repos.backend]
+base = "main"
+
+[repos.backend.hooks]
+on_open = "cargo build && cargo test"
+
+# Example: Match by full remote URL (more specific)
+[repos."github.com/mycompany/python-service"]
+base = "main"
+
+[repos."github.com/mycompany/python-service".hooks]
+on_open = "poetry install && poetry shell"
+
+# Example: Simple hook without base override
+[repos.my-personal-project]
+
+[repos.my-personal-project.hooks]
+on_open = "echo 'Welcome to my project!'"

@@ -1,2 +1,5 @@
 (library
- (name gwt))
+ (name gw)
+ (libraries core core_unix otoml)
+ (preprocess
+  (pps ppx_jane)))
